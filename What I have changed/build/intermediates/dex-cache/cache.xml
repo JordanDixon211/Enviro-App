@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="287051610dd01cc6eeaed7fc689712c31ad1ff70">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-10.2.4_92d583f8c7d80b78d97796fb6964517249479e56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5803db663655ef5cb38c6bcb17ba326fdb9edfbd">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-10.2.4_8301a17e7677f1ebc9a55b5a63283a0cc5b3a009\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd1d0d84da2cff18f741c63a9c3af7d9aa89fdd6">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-10.2.4_9aadef70bab070a487b6cc6b443cd0d6b6f58486\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-24.0.0_cd89a0e4534688705ddedea5212a975045a6a31f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="80ecaefc1035fde747999e4c20e18d207363efa2">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-10.2.4_6db8b9c441e89c29bff2ddc27c1dd2b23fd0491c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.3.1_4fbcb0741a37ecfccd401f12de5d4f81fdae5ddb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d0d5e86f5b7203834df01ed78ebfdd5cbf74d48">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-10.2.4_c8e28203016d4180a73e4106c0fb61287a0306b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="597d0d34e15e713c486e8f4ccf739f0c7d05bde4">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-10.2.4_06e8ebf829fe97dfd6e0db4c9e07cc3579401ff9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.3.1_767c98587ed848c9c37add46994e16ef1723c473\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fe159787dd4c4bc9ed6a9d4f7430e9af1f3516c8">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-10.2.4_e6750c91b24df61c8c9e565d1cba8e2327fb515a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d66b8668122393a15c90471c5c974c25439d193a">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-10.2.4_f31533736040dd468864f7fec0e47ab8e11cb3ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_871d14292fa5d10da84258cef000e1af1d63c934\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6b8ad09b76c4ffaedf443ca54bc2418760870689">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-10.2.4_93ffb389ba86c0586e4f6764bfd824aaff6cb4f1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.3.1_cd76814152c815afba335277776440dc4dcc3445\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.1_369763d93526916d5814e56ee0dcab32f8724052\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="657abe17c5ba58f5d24803ba303c6005b180897a">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gass-10.2.4_732b97b0525a87fc0882ef69e2cd3c56c468b0bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2ed7ba48801a0a361727833ade3b6cf096968cc0">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-10.2.4_c1a61a7d171ed9a898dc31059b8d1379fc8099a7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2188ba20a948ec6e7fa671b818c69d876d8bf32d">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-10.2.4_d494c87b4b8b9b4a1403f2160ed5a8a345d3118c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1b95f2bf44857a158b097e9f80d5d18d69f32584">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-10.2.4_cb5944a7cbdb7785de3d2d3bd9c8803805edd3a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa6a6e385297077a344e0bb95ab6c22f22119261">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-10.2.4_a3a094cd99fd78bb714a196f18f55b6c233fefa6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-awareness\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="32aa1b2a2f68f455403d10d41d8ded37c9812f11">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-awareness-10.2.4_ce4e4377c89767a8f83a43768aa61589709bd6a2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="701c58abf53f488bc5bb0162f1305a38a32fb5f1">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-10.2.4_69e3df4936e8b508783652718a68637c3efaa254\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4eeba61bbc47e49a5fbdfd9aa21af5d10bf4df7c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-10.2.4_dff5f119ddfecc5ae3899c68cd0aa7f6ba075f5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a75030f7a3f5f96a15acdab44829bed93154d09f">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-10.2.4_9b28d602790fe0db847eefaf6f41634c30dbc4ce\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9c8affe1f564ec0d063be68469d26e972455217">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-10.2.4_18955872ff44476c66d7e2ce061a02c2132a9501\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="29e4e634375ab2ed25f8db5387b564c78980422a">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-10.2.4_c6ac00a02dcee504e99bbaea14dcef480e93ede2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.3.1_10167bdd81d0e20836cfe4107f14f134a50fbd9e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="acc7a846f0bc56ecccda535fc919fd338b2b3e2c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-10.2.4_8af56987856ddc8ff5b837ccadf4d5687b65c4ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-config\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c01990d0a9bbc67f4c2b9610c1170046c2e37b3e">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-10.2.4_b050c38fb6ea4fab18a4bc7be84b5a1e5585ecfb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.3.1_bba92cd4c7a575008f6e489a6c220bfc07534e70\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5cba8868595f6aaff54cf7d1798591108cf5611c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-10.2.4_990bd1f2580a15ea53b35b17d93e135b589ab104\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="688809418e4c2b5014a028c02708d6aeaba466ff">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-10.2.4_aac4c1b3fcda5beae5cd6427918dd25ecd3a4ea0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_9f56f4772720e31d7cbfc4eb849df3df9e956c9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d2d27edb6fbc12fdf28008cdff920e66f08cf159">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-10.2.4_076b72ac9e63dc4fe069e74949be9325dd04fce7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="93094dbb2af50e23339620bebd7b4b6161410edb">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-10.2.4_e516c7c328f3e66085ecd0724c602ffe307e3cb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.3.1_3a4d0900151b624446d7c461d4ac92533a87ea0a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0e23941db151e67886844de6586e180bb2b860ad">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-clearcut-10.2.4_5907952f7e49fdfbef9f1ac32fa5d6689cd47ee9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-v4-impl\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c76804333008c855433cad5cfd1256e86045e97b">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-v4-impl-10.2.4_3cbd6af2133fdc3245b89c6c19f4d7d988574e5b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.1_5efcc15ddc97acfb22a310986e6a5a17ba0a2323\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0\constraint-layout-solver-1.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90493f2ea15ff3f57416368123e5d4d180e0c6fd">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0_b714badb8e1745dfa2da3b517144a74a01987955\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\palette-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-palette-v7-24.0.0_a768c4661f1a716a0b47fc806ed8ea4e20a9dd23\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ed08fab37c3a572da1d9ed2bf2e36c8d3e2bc48">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-10.2.4_a51925affa7f76ff08c17de6b38de89462f15f92\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="183e4fb7cf95f4fa54963cfcdaf0f4d7e2397bad">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-10.2.4_27e977f7b3132f1dfd4ed89f2131d04e49ff20c9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d20672631818754557255886d3feb43e7fe75a66">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0_f38fc8a1582ad1fba0d24a15532367372e0f5247\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.3.1_ade2d6d8f6985de7be5aac3c22aed395e9208112\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43df709c95f6b0501b3adbc7da992b6a69a03214">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-10.2.4_c9e45270b261628be973272552692a44c2f05bad\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="54933c89f90a872aa342004e82b23e776fe12736">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-10.2.4_9865ab6782aa238688602e6588f26d21786fc954\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e0f082141b7aa90aab5d3a47ab09b0edc958f6b">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-10.2.4_f6e1633c7da279c7903c151517b766ff98f1d456\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-instantapps\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fdf15d202000492aefe43092b21af5332df0178">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-instantapps-10.2.4_1dac293b68e7bb9eeb8cd324fcafec7803a33e45\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98ac18f891a8279ae57c4771cbf4a2a65f95b04c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-10.2.4_0ceb5c685e5c6c53a6b23f5fa1f277fd94d736de\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02e70fe04e0767ccfa16745b3398816d1171f0ad">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-10.2.4_7c0323e93d9aeeba3fb34f98fee584c67dcb1cd6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.1_2bf03b8671ac5be4a16dea4141677dec945b9f09\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8748e15968514ff1708deb3bb7f0c17623e50bbb">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-10.2.4_049bf75a432b50715671135d1921063c2e2e0478\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-places\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c8a4af7cf76d958c76ed7682f39e4b386b69305">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-places-10.2.4_fbd639b2170453defed16b5eb8f06eb22681fa9c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5460c6d268b02b2021cadcadbd6f8cb41c29853c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_671cf56252322007f94a15eeeb746d48e1d0b95c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="143e5647b772c08c9f0d807b24bbc0b05ff6c7d2">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-10.2.4_46d499d01873a766af3de202169eaef6a418c9d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast-framework\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d72eb1ceff1b0bac4916088eb44bb93f86b1265c">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-framework-10.2.4_0c013c28f2ca94d6edba2b12b70a71ac464fdc31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-appindexing\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6b8d1a53648f7ecfe9e7bf0baf9ca657c5a1ff91">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-appindexing-10.2.4_653d0d28db4072d5bd4730e3f389c6e14bcd8d4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.1_c84fde6e4d0c63d4b35d4b3b20914f864d3f1ec7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="90236fba9ac4dfb1f4196e231aab964522143ef6">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-10.2.4_cb8bca2fd23c5a7c6a7ee0eaf7cd7c191736f350\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.3.1_973a3ef744c63471b566a5aa185abc534ca67cb3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="610ae6a6872d9718fc05e2c726758206bd367595">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-10.2.4_3c62eb5f8ec93cb685e219a2d32d007c51041397\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="88ae4c6ceaeab7beca5e396e0698c6958e26a2d2">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-10.2.4_9a0c98eeb065e88d84309d3f0799322d00c698ff\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b50fe5288bba9d1635ba619bd3c308319205543e">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-10.2.4_2522a75c29f8da0bab875d41f6dbf2fb1c00543f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b2b4d3ecd541814f08200f8171def113095d5f39">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-10.2.4_0364f851dbcd2ad28aae6aab102255fe9eea3471\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dde643ce80b967f869e9b111255815ba4d391653">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-10.2.4_19661fc431cb620015756c8bf12b3690a3118a4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\10.2.4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="29d9916bd9ad8406a53edbafbbce5e18943aa882">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-10.2.4_b5d095f00ad9d9945d1085b4385523226b4e4fbd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6857f31392588a6ba759ac67e98de78c4f11ad43">
+        <dex dex="C:\Users\Jordan\AndroidStudioProjects\EnviroApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_effc405271b49ecab040cbf2e6ae2009329f3c6e\classes.dex" />
+    </item>
+
+</items>

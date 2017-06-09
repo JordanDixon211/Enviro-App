@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/projectName"
+        android:paddingTop="10dp"
+        android:textColor="@color/cast_intro_overlay_background_color"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/LocationText"
+        android:paddingTop="10dp"
+        android:textColor="@color/cast_intro_overlay_background_color"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_below="@+id/projectName"
+        android:layout_alignStart="@+id/projectName"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Add Data to Project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addMore"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/LocationText"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addMore"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+</RelativeLayout>

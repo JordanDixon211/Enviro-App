@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.jordan.enviroapp.MainActivity">
+
+    <Button
+        android:text="New Project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/NewProjectBtnMain"
+        android:layout_alignBottom="@+id/PreviousProjectBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp"
+        android:elevation="0dp" />
+
+    <Button
+        android:text="Old Project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/PreviousProjectBtn"
+        android:layout_marginBottom="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/NewProjectBtnMain"
+        android:layout_alignEnd="@+id/NewProjectBtnMain" />
+
+    <TextView
+        android:text="Enviro App"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="36sp"
+        android:layout_marginBottom="101dp"
+        android:layout_above="@+id/NewProjectBtnMain"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

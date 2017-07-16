@@ -146,6 +146,7 @@ public class RecyclerViewsProjectData extends Activity{
                 projectDataStruct.setLatiude(cursor.getString(2));
                 projectDataStruct.setNotes(cursor.getString(3));
                 projectDataStruct.setProjectId(cursor.getInt(4));
+                projectDataStruct.setFilePath(cursor.getString(5));
 
                 projectDataList.add(projectDataStruct);
             }while (cursor.moveToNext());

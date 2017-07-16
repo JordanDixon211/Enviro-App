@@ -1,12 +1,26 @@
 package com.example.jordan.enviroapp.RecycleViews;
 
 
-public class ProjectDataStruct {
+import android.support.annotation.NonNull;
+
+import java.util.Collections;
+import java.util.List;
+
+public class ProjectDataStruct implements Comparable<ProjectDataStruct> {
     private int id;
     private String longatiude;
     private String latiude;
     private String notes;
     private int projectId;
+    String filePath;
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
 
     public int getId() {
         return id;
@@ -47,4 +61,20 @@ public class ProjectDataStruct {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    @Override
+    public int compareTo(@NonNull ProjectDataStruct o) {
+        if (this.getId() < o.getId()){
+            return -1;
+        }else if(this.getId() > o.getId()){
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+    public void sortList(List unsortedList){
+         Collections.sort(unsortedList);
+    }
+
 }

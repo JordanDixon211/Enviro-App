@@ -24,9 +24,6 @@ public class RecyclerViewsProject extends AppCompatActivity {
     private List<ProjectInfoStruct> adapterDataProjectInfo;
     private List<ProjectDataStruct> adapterDataProjectData;
 
-    String[] projection = {
-            DatabaseContract.ProjectInfoTable.COLUMN_NAME_PROJECTNAME
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         db = new ProjectInfoReaderDbHelper(this).getWritableDatabase();
@@ -36,8 +33,8 @@ public class RecyclerViewsProject extends AppCompatActivity {
 
         mRecyclerView.setHasFixedSize(true);
 
-        adapterDataProjectInfo = getAllInfoData();
         adapterDataProjectData = getAllProjectData();
+        adapterDataProjectInfo = getAllInfoData(adapterDataProjectData);
 
 
         mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(15));
@@ -63,13 +60,14 @@ public class RecyclerViewsProject extends AppCompatActivity {
 
     /**
     * Project queries fill up the arrays below, to then be sent to the recycler view.
-    * */
+    *
+     * @param adapterDataProjectData*/
 
-    private List<ProjectInfoStruct> getAllInfoData(){
+    private List<ProjectInfoStruct> getAllInfoData(List<ProjectDataStruct> adapterDataProjectData){
         List<ProjectInfoStruct> projecetInfoList = new ArrayList<ProjectInfoStruct>();
         //Generating query.
         Cursor cursor = db.rawQuery(ProjectInfoReaderDbHelper.SQL_PROJECT_INFO_QUERY, null);
-
+        int id = 1;
         if (cursor.moveToFirst()){
             do{
                 ProjectInfoStruct projectInfoStruct = new ProjectInfoStruct();
@@ -79,9 +77,19 @@ public class RecyclerViewsProject extends AppCompatActivity {
                 projectInfoStruct.setSubject(cursor.getString(3));
                 projectInfoStruct.setGroupMembers(cursor.getString(4));
 
+                for (int i = 0 ; i <= adapterDataProjectData.size(); i++){
+                    if (adapterDataProjectData.get(i) != null && adapterDataProjectData.get(i).getId() == id) {
+                        projectInfoStruct.setFilePath(adapterDataProjectData.get(i).getFilePath());
+                        id++;
+                        System.out.println(projectInfoStruct.getFilePath());
+                        break;
+                    }
+                }
+
                 projecetInfoList.add(projectInfoStruct);
             }while (cursor.moveToNext());
         }
+
         return projecetInfoList;
     }
 
@@ -102,9 +110,13 @@ public class RecyclerViewsProject extends AppCompatActivity {
                 projectDataStruct.setLatiude(cursor.getString(2));
                 projectDataStruct.setNotes(cursor.getString(3));
                 projectDataStruct.setProjectId(cursor.getInt(4));
+                projectDataStruct.setFilePath(cursor.getString(5));
 
                 projectDataList.add(projectDataStruct);
             }while (cursor.moveToNext());
+        }
+        for (int i = 0; i < projectDataList.size(); i++){
+            System.out.println("Project  : " + projectDataList.get(i).getFilePath());
         }
         return projectDataList;
     }

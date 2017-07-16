@@ -7,6 +7,30 @@ public class ProjectInfoStruct {
     private String locationText;
     private String subject;
     private String groupMembers;
+    private String FilePath;
+    private int idFilePath;
+
+    public int getIdFilePath() {
+        return idFilePath;
+    }
+
+    /*
+    * Id relative to the path, this is the ID assoisated with this picture.
+    * */
+    public void setIdFilePath(int idFilePath) {
+        this.idFilePath = idFilePath;
+    }
+
+    public String getFilePath() {
+        return FilePath;
+    }
+
+    /*
+    * Where current Record is Saved in the  directory
+    * */
+    public void setFilePath(String filePath) {
+        FilePath = filePath;
+    }
 
     public int getId() {
         return id;

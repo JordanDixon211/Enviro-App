@@ -9,12 +9,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
@@ -54,6 +56,7 @@ public class RecordLocations extends AppCompatActivity {
     Bitmap bitmapImage;
     boolean locEnabled; //Global Var, acting as a kind of out proc
     int iDfromRecyclerView;
+    String mCurrentPhotoPath;
 
     private long projectIdFileName, projectDataIdFileName;
 
@@ -85,13 +88,12 @@ public class RecordLocations extends AppCompatActivity {
         toggleButtonCamera.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    System.out.println("1");
+                if (isChecked && iDfromRecyclerView > 0) {
                     dispatchTakePictureIntent(iDfromRecyclerView,getAllProjectData() + 1); // will be the new Id
-                    testSetPhoto();
-                } else {
+                } else if (isChecked && iDfromRecyclerView == 0){
+                    dispatchTakePictureIntent(getAllProjects() + 1, getAllProjectData() + 1);
+                }else if (!isChecked){
                     bitmapImage = null;
-                    System.out.println("2");
                 }
             }
         });
@@ -164,8 +166,10 @@ public class RecordLocations extends AppCompatActivity {
                     long finalEval = insertProjectDataOld(iDfromRecyclerView);
                     projectIdFileName = iDfromRecyclerView;
                     projectDataIdFileName = finalEval;
-                    testSetPhoto();
                     Toast.makeText(getApplicationContext(), "Location Saved", Toast.LENGTH_LONG).show();
+                    System.out.println("Actual Id Produced: " + finalEval);
+                    db.close();
+
 
                 } else {
                     if (locEnabled) { //global var acting as a locEnabled.
@@ -179,6 +183,8 @@ public class RecordLocations extends AppCompatActivity {
                         //inter new Project data for the new Project
                         long finalEval = insertProjectData(newprojectId);
                         projectDataIdFileName = finalEval;
+                        System.out.println("Actual Id Produced: " + finalEval);
+                        db.close();
                         if (finalEval > 0) {
                             Toast.makeText(getApplicationContext(), "Location Saved", Toast.LENGTH_LONG).show();
                         }
@@ -244,41 +250,6 @@ public class RecordLocations extends AppCompatActivity {
     }
 
 
-    private long insertNewProject(){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_PROJECTNAME, getProjectName);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_LOCATIONTEXT, locationTest);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_SUBJECT, projecetSubjectText);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_GROUPMEMBERS, GroupMembers);
-
-        //Get Generated Key.
-        long  generatedRow = db.insert(TABLE_NAME_PROJECT, null, values); //insert values into the database via values, map relation.
-        return generatedRow;
-    }
-
-        private long insertProjectData(long generatedRow){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
-        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, generatedRow); // Insert the generated Row Here.
-        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
-
-        //Get Generated Key.
-        return finalEval;
-    }
-
-    private long insertProjectDataOld(int id){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
-        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, id); // Insert the generated Row Here.
-        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
-        //Get Generated Key.
-        return finalEval;
-    }
-
     /*
     * Intent, decribes an action that needs to be taken.
     * Method takes a photo and resumes the current activity. */
@@ -297,38 +268,36 @@ public class RecordLocations extends AppCompatActivity {
             }
             if (photoFile != null) {
                 Uri photoUri = FileProvider.getUriForFile(this, "com.example.jordan.enviroapp.FileProvider", photoFile);
-                System.out.println(photoUri.toString());
+                System.out.println("Photo uri: " + photoUri.toString());
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
+                testSetPhoto();
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                testSetPhoto();
             }
         }
     }
 
-    /*
-    * This capture's the picture taken, use this to capture the bitMap,
-    * private variable bitmap is used to set it locally to the package.
-    * THE IMAGE IS NOT GOOD ENOUGH FOR FULL SIZE NEEDS TO BE CHANGED TO
-    * ENSURE IMAGE IS A GOOD QUALITY FOR THE USER TO EXPORT THESE IMAGES
+
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
-            Bundle extras = data.getExtras();
-            bitmapImage = (Bitmap)extras.get("data");
-            pictureTaken.setImageBitmap(bitmapImage);
-            pictureTaken.setEnabled(true);
+            testSetPhoto();
+
         }
     }
-    */
+
 
     //save member variable for later use, returns unique file name for a new photo
-    String mCurrentPhotoPath;
     private File createImageFile(long projectId, long projectDataId) throws IOException {
         String filename = String.valueOf(projectId) + String.valueOf(projectDataId); //concat the two values to define a unique filename, eg if id = 1 and projectid = 5 filename = 15.
         String imageFileName = "JPEG_" + filename;
+        System.out.println("ProjectId: " + projectId + " ProjectDataId: " + projectDataId);
+        System.out.println("filename: " + filename);
 
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(imageFileName, ".jpg", storageDir);
+        System.out.println(storageDir);
         mCurrentPhotoPath = image.getAbsolutePath();
-        testSetPhoto();
+
         return image;
     }
 
@@ -338,8 +307,9 @@ public class RecordLocations extends AppCompatActivity {
         File file = new File(mCurrentPhotoPath);
         if (file.exists()){
             Bitmap myBitmap = BitmapFactory.decodeFile(file.toString());
+            System.out.println(file.toString());
             pictureTaken.setImageBitmap(myBitmap);
-            pictureTaken.setEnabled(true);
+            pictureTaken.setBackgroundColor(Color.RED);
         }
     }
 
@@ -361,6 +331,10 @@ public class RecordLocations extends AppCompatActivity {
             }while (cursor.moveToNext());
         }
 
+        if (projecetInfoList.isEmpty()){
+            return 0;
+        }
+
         int getlargestId = projecetInfoList.get(projecetInfoList.size() - 1).getId();
         return getlargestId;
     }
@@ -369,28 +343,76 @@ public class RecordLocations extends AppCompatActivity {
      * Project queries fill up the arrays below, to then be sent to the recycler view.
      * */
 
-    private int getAllProjectData(){
+    private long getAllProjectData(){
         List<ProjectDataStruct> projectDataList = new ArrayList<ProjectDataStruct>();
         //Generating query.
         Cursor cursor = db.rawQuery(ProjectInfoReaderDbHelper.SQL_PROJECT_DATA_QUERY, null);
-
+        boolean firstEntry = true;
         if (cursor.moveToFirst()){
+            firstEntry = false;
             do{
                 ProjectDataStruct projectDataStruct = new ProjectDataStruct();
                 projectDataStruct.setId(cursor.getInt(0));
                 projectDataStruct.setLongatiude(cursor.getString(1));
                 projectDataStruct.setLatiude(cursor.getString(2));
                 projectDataStruct.setNotes(cursor.getString(3));
-                projectDataStruct.setProjectId(cursor.getInt(4));
-
+                projectDataStruct.setProjectId(cursor.getInt(5));
                 projectDataList.add(projectDataStruct);
             }while (cursor.moveToNext());
         }
 
+        int getlargestIdData;
 
-        int getlargestIdData = projectDataList.get(projectDataList.size() - 1).getId();
+        if (firstEntry){
+             getlargestIdData = 0;
+
+        }else{
+             getlargestIdData = projectDataList.get(projectDataList.size() - 1).getId();
+        }
         return getlargestIdData;
     }
+
+
+    private long insertNewProject(){
+        ContentValues values = new ContentValues();
+        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_PROJECTNAME, getProjectName);
+        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_LOCATIONTEXT, locationTest);
+        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_SUBJECT, projecetSubjectText);
+        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_GROUPMEMBERS, GroupMembers);
+
+        //Get Generated Key.
+        long  generatedRow = db.insert(TABLE_NAME_PROJECT, null, values); //insert values into the database via values, map relation.
+        return generatedRow;
+    }
+
+    private long insertProjectData(long generatedRow){
+        ContentValues values = new ContentValues();
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
+        if (mCurrentPhotoPath == null){
+            values.put(DatabaseContract.ProjectData.COLUMN_NAME_IMAGE_PATH, "");
+        }else{
+            values.put(DatabaseContract.ProjectData.COLUMN_NAME_IMAGE_PATH, mCurrentPhotoPath);
+        }
+        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, generatedRow); // Insert the generated Row Here.
+        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
+
+        //Get Generated Key.
+        return finalEval;
+    }
+
+    private long insertProjectDataOld(int id){
+        ContentValues values = new ContentValues();
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
+        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
+        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, id); // Insert the generated Row Here.
+        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
+        //Get Generated Key.
+        return finalEval;
+    }
+
 
 }
 

@@ -1,15 +1,21 @@
 package com.example.jordan.enviroapp.RecycleViews;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jordan.enviroapp.R;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
 import java.util.List;
 
 
@@ -26,19 +32,24 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView projectNameTextView;
-        public TextView projectLocationTextView;
-
+        public ImageView projectImageView;
 
         public ViewHolder(View itemLayout) {
             super(itemLayout);
             projectNameTextView = (TextView)itemLayout.findViewById(R.id.projectName) ;
-            projectLocationTextView = (TextView)itemLayout.findViewById(R.id.ProjectLocation);
+            projectImageView = (ImageView)itemLayout.findViewById(R.id.projectImage);
         }
 
         public void bind(final ProjectInfoStruct item, final OnItemClickListener listener) {
 
-            projectNameTextView.setText("Project Name: " + item.getProjectName());
-            projectLocationTextView.setText("Location Name: " + item.getLocationText());
+            projectNameTextView.setText(item.getProjectName());
+            if (item.getFilePath() == null){
+                System.out.println(item.getFilePath());
+            }else {
+                Bitmap myBitmap = BitmapFactory.decodeFile(item.getFilePath().toString());
+                System.out.println(myBitmap.toString());
+                projectImageView.setImageBitmap(myBitmap);
+            }
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {

@@ -44,10 +44,12 @@ public class RecyclerViewsProject extends AppCompatActivity {
         mRecyclerView.setAdapter(new MyAdapter(adapterDataProjectInfo, new MyAdapter.OnItemClickListener() {
               public void onItemClick(ProjectInfoStruct item) {
                   System.out.println("item Selected:  " + item.getProjectName());
+                  System.out.println("ITEM ID: " + item.getId());
+
 
                   Intent intent = new Intent(RecyclerViewsProject.this, RecyclerViewsProjectData.class);
                   Bundle bundle = new Bundle();
-                  intent.putExtra("itemId" , item.getId()); //location to search for in this arrayList.
+                  bundle.putInt("itemId" , item.getId()); //location to search for in this arrayList.
                   intent.putExtras(bundle);
                   startActivity(intent);
 

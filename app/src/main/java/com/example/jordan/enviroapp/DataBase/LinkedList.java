@@ -76,7 +76,7 @@ public class LinkedList <T> {
 
     public boolean remove(T o) {
         if (!isEmpty() && o != null) {
-            ListNode removeNode = new Node(o);
+            ListNode removeNode = new Node(o); //temp node
                 if (root.getData() == removeNode.getData()) {
                     root = root.rightLink();
                     root.setLeft(null);

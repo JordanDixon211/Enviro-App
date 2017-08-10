@@ -47,9 +47,11 @@ public class RecyclerViewsProjectData extends Activity{
         //Capture Data.
         Bundle bundle = getIntent().getExtras();
         id = bundle.getInt("itemId");
+        System.out.println(id);
 
         projectinfoStruct = getAllInfoData();
         projecetDataStruct = getAllProjectData();
+
 
         if(id > 0) {
             id = id - 1;
@@ -63,6 +65,12 @@ public class RecyclerViewsProjectData extends Activity{
              * dataset for this view*/
 
             List<ProjectDataStruct> results = searchForItemInfo(id + 1);
+
+
+            for(int i = 0; i < results.size(); i++){
+                System.out.println(results.get(i).getId());
+
+            }
             mRecyclerView.setHasFixedSize(true);
 
             mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(15));
@@ -70,7 +78,6 @@ public class RecyclerViewsProjectData extends Activity{
 
             mLayoutManager = new LinearLayoutManager(this);
             mRecyclerView.setLayoutManager(mLayoutManager);
-
             mRecyclerView.setAdapter(new MyAdapterData(results, new MyAdapterData.OnItemClickListener() {
                 public void onItemClick(ProjectDataStruct item) {
                     System.out.println("item Selected:  " + item.getId());

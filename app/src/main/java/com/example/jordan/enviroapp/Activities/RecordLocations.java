@@ -31,6 +31,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.jordan.enviroapp.DataBase.DatabaseContract;
+import com.example.jordan.enviroapp.DataBase.LinkedList;
 import com.example.jordan.enviroapp.DataBase.ProjectInfoReaderDbHelper;
 import com.example.jordan.enviroapp.R;
 import com.example.jordan.enviroapp.RecycleViews.ProjectDataStruct;
@@ -62,9 +63,11 @@ public class RecordLocations extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record_locations);
+
+        db = new ProjectInfoReaderDbHelper(this).getWritableDatabase();
 
         projectIdFileName = 0;
         projectDataIdFileName = 0;
@@ -89,9 +92,9 @@ public class RecordLocations extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked && iDfromRecyclerView > 0) {
-                    dispatchTakePictureIntent(iDfromRecyclerView,getAllProjectData() + 1); // will be the new Id
+                    dispatchTakePictureIntent(iDfromRecyclerView, ProjectInfoReaderDbHelper.getAllProjectData(db) + 1); // will be the new Id
                 } else if (isChecked && iDfromRecyclerView == 0){
-                    dispatchTakePictureIntent(getAllProjects() + 1, getAllProjectData() + 1);
+                    dispatchTakePictureIntent(ProjectInfoReaderDbHelper.getAllProjects(db) + 1, ProjectInfoReaderDbHelper.getAllProjectData(db) + 1);
                 }else if (!isChecked){
                     bitmapImage = null;
                 }
@@ -132,7 +135,6 @@ public class RecordLocations extends AppCompatActivity {
         };
 
 
-        db = new ProjectInfoReaderDbHelper(this).getWritableDatabase();
         /**
          * Capture Data held within the NewProjectForm, implemented here to insert The Generated Key with the record.
          */
@@ -163,7 +165,7 @@ public class RecordLocations extends AppCompatActivity {
 
                     }
                     //insert Project data for an old project
-                    long finalEval = insertProjectDataOld(iDfromRecyclerView);
+                    long finalEval = ProjectInfoReaderDbHelper.insertProjectDataOld(iDfromRecyclerView, latstr, longstr, mCurrentPhotoPath, textCapt, db);
                     projectIdFileName = iDfromRecyclerView;
                     projectDataIdFileName = finalEval;
                     Toast.makeText(getApplicationContext(), "Location Saved", Toast.LENGTH_LONG).show();
@@ -178,10 +180,10 @@ public class RecordLocations extends AppCompatActivity {
                         latstr = Double.toString(location.getLatitude());
                         longstr = Double.toString(location.getLongitude());
                         //InsertNewProject
-                        long newprojectId = insertNewProject();
+                        long newprojectId = ProjectInfoReaderDbHelper.insertNewProject(getProjectName, locationTest, projecetSubjectText, GroupMembers, db);
                         projectIdFileName = newprojectId;
                         //inter new Project data for the new Project
-                        long finalEval = insertProjectData(newprojectId);
+                        long finalEval = ProjectInfoReaderDbHelper.insertProjectData(newprojectId, latstr, longstr, mCurrentPhotoPath, textCapt, db);
                         projectDataIdFileName = finalEval;
                         System.out.println("Actual Id Produced: " + finalEval);
                         db.close();
@@ -313,105 +315,6 @@ public class RecordLocations extends AppCompatActivity {
         }
     }
 
-    private int getAllProjects(){
-        List<ProjectInfoStruct> projecetInfoList = new ArrayList<ProjectInfoStruct>();
-        //Generating query.
-        Cursor cursor = db.rawQuery(ProjectInfoReaderDbHelper.SQL_PROJECT_INFO_QUERY, null);
-
-        if (cursor.moveToFirst()){
-            do{
-                ProjectInfoStruct projectInfoStruct = new ProjectInfoStruct();
-                projectInfoStruct.setId(cursor.getInt(0));
-                projectInfoStruct.setProjectName(cursor.getString(1));
-                projectInfoStruct.setLocationText(cursor.getString(2));
-                projectInfoStruct.setSubject(cursor.getString(3));
-                projectInfoStruct.setGroupMembers(cursor.getString(4));
-
-                projecetInfoList.add(projectInfoStruct);
-            }while (cursor.moveToNext());
-        }
-
-        if (projecetInfoList.isEmpty()){
-            return 0;
-        }
-
-        int getlargestId = projecetInfoList.get(projecetInfoList.size() - 1).getId();
-        return getlargestId;
-    }
-
-    /**
-     * Project queries fill up the arrays below, to then be sent to the recycler view.
-     * */
-
-    private long getAllProjectData(){
-        List<ProjectDataStruct> projectDataList = new ArrayList<ProjectDataStruct>();
-        //Generating query.
-        Cursor cursor = db.rawQuery(ProjectInfoReaderDbHelper.SQL_PROJECT_DATA_QUERY, null);
-        boolean firstEntry = true;
-        if (cursor.moveToFirst()){
-            firstEntry = false;
-            do{
-                ProjectDataStruct projectDataStruct = new ProjectDataStruct();
-                projectDataStruct.setId(cursor.getInt(0));
-                projectDataStruct.setLongatiude(cursor.getString(1));
-                projectDataStruct.setLatiude(cursor.getString(2));
-                projectDataStruct.setNotes(cursor.getString(3));
-                projectDataStruct.setProjectId(cursor.getInt(5));
-                projectDataList.add(projectDataStruct);
-            }while (cursor.moveToNext());
-        }
-
-        int getlargestIdData;
-
-        if (firstEntry){
-             getlargestIdData = 0;
-
-        }else{
-             getlargestIdData = projectDataList.get(projectDataList.size() - 1).getId();
-        }
-        return getlargestIdData;
-    }
-
-
-    private long insertNewProject(){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_PROJECTNAME, getProjectName);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_LOCATIONTEXT, locationTest);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_SUBJECT, projecetSubjectText);
-        values.put(DatabaseContract.ProjectInfoTable.COLUMN_NAME_GROUPMEMBERS, GroupMembers);
-
-        //Get Generated Key.
-        long  generatedRow = db.insert(TABLE_NAME_PROJECT, null, values); //insert values into the database via values, map relation.
-        return generatedRow;
-    }
-
-    private long insertProjectData(long generatedRow){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
-        if (mCurrentPhotoPath == null){
-            values.put(DatabaseContract.ProjectData.COLUMN_NAME_IMAGE_PATH, "");
-        }else{
-            values.put(DatabaseContract.ProjectData.COLUMN_NAME_IMAGE_PATH, mCurrentPhotoPath);
-        }
-        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, generatedRow); // Insert the generated Row Here.
-        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
-
-        //Get Generated Key.
-        return finalEval;
-    }
-
-    private long insertProjectDataOld(int id){
-        ContentValues values = new ContentValues();
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_LONG, longstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_LOCATION_Alt, latstr);
-        values.put(DatabaseContract.ProjectData.COLUMN_NAME_NOTES, textCapt.getText().toString());
-        values.put(DatabaseContract.ProjectData.COLUMN_PROJECTINFO_ID, id); // Insert the generated Row Here.
-        long finalEval = db.insert(TABLE_NAME_DATA, null, values);
-        //Get Generated Key.
-        return finalEval;
-    }
 
 
 }

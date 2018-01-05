@@ -12,7 +12,6 @@ public class Test {
         LinkedList<ProjectDataStruct> c = new LinkedList();
         ProjectDataStruct project = new ProjectDataStruct();
         project.setId(1);
-        project.setFilePath("ur mum");
         c.add(project);
 
 
